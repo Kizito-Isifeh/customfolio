@@ -1,4 +1,4 @@
-# 📄 Customfolio – Product Requirements Document
+# Customfolio – Product Requirements Document
 
 **Tagline:** _Don’t Just Apply. Stand Out._
 
@@ -18,7 +18,7 @@ Customfolio is a job application assistant designed for creatives and tech profe
 
 ---
 
-## 👥 Target Users
+## Target Users
 
 - Designers, developers, PMs, marketers
 - Junior tech professionals and career switchers
@@ -26,7 +26,7 @@ Customfolio is a job application assistant designed for creatives and tech profe
 
 ---
 
-## 🧩 Core Features
+## Core Features
 
 ### 1. User Accounts
 - Sign up/login via email and Google
@@ -61,7 +61,7 @@ Customfolio is a job application assistant designed for creatives and tech profe
 
 ---
 
-## 🔧 Tech Stack
+## Tech Stack
 
 ### Frontend
 - **Framework:** React.js, Next.js
@@ -77,7 +77,7 @@ Customfolio is a job application assistant designed for creatives and tech profe
 
 ---
 
-## 🛠️ MVP Scope
+## MVP Scope
 
 - User registration/login
 - Project upload + categorization
@@ -98,7 +98,7 @@ Customfolio is a job application assistant designed for creatives and tech profe
 
 ---
 
-## 📈 Roadmap
+## Roadmap
 
 ### Phase 1: MVP
 - Waitlist + onboarding
@@ -115,7 +115,7 @@ Customfolio is a job application assistant designed for creatives and tech profe
 
 ---
 
-## ✅ Success Metrics
+## Success Metrics
 
 - % of users who build and send at least 1 Customfolio
 - Conversion from waitlist to active users
@@ -129,9 +129,3 @@ Customfolio is a job application assistant designed for creatives and tech profe
 - Personalized applications increase interview chances
 - There's no easy tool for building dynamic, targeted portfolios—yet
 - It fulfills an emotional need: regaining control and confidence during job hunts
-
----
-
-## 📬 Join the Waitlist
-
-👉 [customfolio.com](https://www.customfolio.com)  
