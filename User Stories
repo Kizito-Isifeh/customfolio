@@ -33,15 +33,3 @@
 17. **As a user**, I want the system to suggest or generate Shots based on job requirements using GPT, so that I can craft relevant narratives faster.  
 18. **As a user**, I want to reuse Shots across multiple portfolios, so that I don’t rewrite the same story every time.  
 19. **As a user**, I want to embed Shots in different parts of my portfolio, so that my work appears tailored and engaging.
-
-## Tech Stack Support (For Dev Team)
-
-20. **As a frontend developer**, I want to use React/Next.js with Tailwind, so that I can build fast and responsive interfaces.  
-21. **As a backend developer**, I want to use Node.js or Django, so that I can implement secure and scalable APIs.  
-22. **As an admin**, I want analytics from Mixpanel or PostHog, so that I can monitor user behavior and improve features.
-
-## Monetization/User Roles
-
-23. **As a free user**, I want to try creating a limited portfolio with basic features, so that I can see the value before upgrading.  
-24. **As a paid user**, I want access to more Shots, themes, and analytics, so that I can optimize my job hunt.  
-25. **As a bootcamp/team leader**, I want a team dashboard to manage student portfolios and track outcomes.
