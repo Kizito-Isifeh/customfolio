@@ -146,12 +146,23 @@
   </footer>
 
   <script>
-    function notifyMe(inputId, btn) {
+    async function notifyMe(inputId, btn) {
       const email = document.getElementById(inputId).value;
       if (!email || !email.includes('@')) { alert('Please enter a valid email.'); return; }
-      btn.textContent = '✓ You\'re on the list!';
-      btn.style.background = '#1a6b2f';
-      document.getElementById(inputId).disabled = true;
+      btn.textContent = 'Saving...';
+      try {
+        await fetch('https://script.google.com/macros/s/AKfycbzGjxSVe1Q01lFRl3HDZttkJqY4OW9g2zeMy2_4tcUgpjTFg3qMso6pJF0NztTQ4gqG/exec', {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: `name=&email=${encodeURIComponent(email)}&source=Figma+Changelog+Page`
+        });
+        btn.textContent = '✓ You\'re on the list!';
+        btn.style.background = '#1a6b2f';
+        document.getElementById(inputId).disabled = true;
+      } catch(err) {
+        btn.textContent = 'Try again';
+      }
     }
   </script>
 </body>
