@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Credit Ledger — Customfolio</title>
+  <meta name="description" content="Replace the notebook. A digital ledger for SMEs to track customer credit, record repayments, and send automated reminders." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--ink:#0f0f0f;--ink-faint:#6b6b6b;--ink-ghost:#b0b0b0;--paper:#f5f2ec;--paper-bright:#fdfcf9;--accent:#d94f2b;--accent-2:#7b2bd9;--border:rgba(15,15,15,0.1);--card-bg:#ffffff}
+    body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+    nav{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;height:60px}
+    .nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:18px;letter-spacing:-0.02em;color:var(--ink);text-decoration:none}.nav-logo span{color:var(--accent)}
+    .nav-back{font-size:13px;font-weight:500;color:var(--ink-faint);text-decoration:none;transition:color .2s}.nav-back:hover{color:var(--ink)}
+    .product-hero{max-width:1100px;margin:0 auto;padding:80px 5vw 60px;display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:start}
+    .product-badge{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-2);background:#f3e8ff;padding:5px 12px;border-radius:100px;margin-bottom:24px}
+    .product-hero h1{font-family:'Syne',sans-serif;font-size:clamp(40px,6vw,72px);font-weight:800;line-height:.98;letter-spacing:-.03em;margin-bottom:24px}
+    .product-hero h1 em{font-style:normal;color:var(--accent)}
+    .product-hero .lead{font-size:17px;font-weight:300;color:var(--ink-faint);line-height:1.75;margin-bottom:40px}
+    .coming-soon-box{background:var(--card-bg);border:1px solid var(--border);padding:36px 32px;border-radius:4px;position:sticky;top:80px}
+    .coming-soon-label{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+    .coming-soon-box h3{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
+    .coming-soon-box p{font-size:14px;color:var(--ink-faint);font-weight:300;line-height:1.7;margin-bottom:28px}
+    .price-row{display:flex;align-items:baseline;gap:8px;margin-bottom:20px}
+    .price{font-family:'Syne',sans-serif;font-size:28px;font-weight:800}.price-note{font-size:13px;color:var(--ink-ghost)}
+    .btn-notify{display:block;width:100%;padding:14px;background:var(--ink);color:var(--paper);font-family:'Syne',sans-serif;font-size:14px;font-weight:700;letter-spacing:.02em;text-align:center;border:none;border-radius:4px;cursor:pointer;transition:background .2s;margin-bottom:12px}
+    .btn-notify:hover{background:var(--accent)}
+    .notify-input{width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:4px;font-family:'DM Sans',sans-serif;font-size:14px;margin-bottom:10px;outline:none;background:var(--paper);color:var(--ink);transition:border-color .2s}
+    .notify-input:focus{border-color:var(--accent)}
+    .privacy-note{font-size:11px;color:var(--ink-ghost);text-align:center}
+    .features-section{max-width:1100px;margin:0 auto;padding:0 5vw 80px}
+    .features-label{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+    .features-title{font-family:'Syne',sans-serif;font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-.02em;margin-bottom:48px}
+    .feature-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
+    .feature-item{background:var(--card-bg);border:1px solid var(--border);padding:28px 24px;border-radius:4px}
+    .feature-icon{font-size:24px;margin-bottom:16px}
+    .feature-item h4{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;margin-bottom:8px}
+    .feature-item p{font-size:13px;color:var(--ink-faint);font-weight:300;line-height:1.7}
+    footer{border-top:1px solid var(--border);padding:32px 5vw;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+    .footer-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:16px;letter-spacing:-.02em;color:var(--ink);text-decoration:none}.footer-logo span{color:var(--accent)}
+    .footer-copy{font-size:12px;color:var(--ink-ghost)}
+    @media(max-width:768px){.product-hero{grid-template-columns:1fr}.coming-soon-box{position:static}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-logo" href="/">custom<span>folio</span></a>
+    <a class="nav-back" href="/">← All Products</a>
+  </nav>
+  <div class="product-hero">
+    <div>
+      <div class="product-badge">📒 For SMEs</div>
+      <h1>Digital<br><em>Credit</em><br>Ledger</h1>
+      <p class="lead">Replace the worn notebook. A clean digital ledger built for small businesses to track customer credit, record repayments, and send automatic payment reminders.</p>
+      <p style="font-size:14px;color:var(--ink-faint);font-weight:300;line-height:1.8">Millions of African SMEs still manage credit with pen and paper — and lose money because of it. A notebook can't send reminders. It can't show you who owes the most. It can't tell you when a customer hasn't paid in 30 days. Digital Credit Ledger can.</p>
+    </div>
+    <div class="coming-soon-box">
+      <div class="coming-soon-label">✦ Coming Soon</div>
+      <h3>Digital Credit Ledger</h3>
+      <p>Join the waitlist and be first to know when it launches.</p>
+      <div class="price-row"><span class="price">Paid</span><span class="price-note">pricing TBD</span></div>
+      <input class="notify-input" type="email" id="cl-email" placeholder="your@email.com" />
+      <button class="btn-notify" onclick="notifyMe('cl-email', this)">Notify Me at Launch</button>
+      <p class="privacy-note">No spam. Just the launch announcement.</p>
+    </div>
+  </div>
+  <section class="features-section">
+    <div class="features-label">What it does</div>
+    <h2 class="features-title">The notebook,<br>but smarter.</h2>
+    <div class="feature-list">
+      <div class="feature-item"><div class="feature-icon">👤</div><h4>Customer Credit Profiles</h4><p>Create a profile for each customer, track their outstanding balance, and see their full payment history.</p></div>
+      <div class="feature-item"><div class="feature-icon">✅</div><h4>Easy Repayment Recording</h4><p>Log repayments in seconds. The ledger updates automatically and shows the remaining balance.</p></div>
+      <div class="feature-item"><div class="feature-icon">🔔</div><h4>Automated Reminders</h4><p>Send payment reminders automatically via WhatsApp or SMS when payment is due or overdue.</p></div>
+      <div class="feature-item"><div class="feature-icon">📊</div><h4>Debt Overview Dashboard</h4><p>See total outstanding credit across all customers at a glance — sorted by amount or overdue date.</p></div>
+      <div class="feature-item"><div class="feature-icon">📄</div><h4>Customer Statements</h4><p>Generate and share a clean statement with any customer — showing what they owe and what they've paid.</p></div>
+      <div class="feature-item"><div class="feature-icon">☁️</div><h4>Cloud Backup</h4><p>Never lose your data. Everything is backed up securely — no more losing a notebook and losing money.</p></div>
+    </div>
+  </section>
+  <footer>
+    <a class="footer-logo" href="/">custom<span>folio</span></a>
+    <p class="footer-copy">© 2025 Customfolio. All rights reserved.</p>
+  </footer>
+  <script>function notifyMe(inputId,btn){const email=document.getElementById(inputId).value;if(!email||!email.includes('@')){alert('Please enter a valid email.');return;}btn.textContent='✓ You\'re on the list!';btn.style.background='#1a6b2f';document.getElementById(inputId).disabled=true;}</script>
+</body>
+</html>
