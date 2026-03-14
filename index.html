@@ -665,12 +665,26 @@
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
     // Notify handler
-    function handleNotify(e) {
+    async function handleNotify(e) {
       e.preventDefault();
+      const input = e.target.querySelector('input');
       const btn = e.target.querySelector('button');
-      btn.textContent = '✓ You\'re on the list!';
-      btn.style.background = '#1a6b2f';
-      e.target.querySelector('input').disabled = true;
+      const email = input.value;
+      if (!email || !email.includes('@')) return;
+      btn.textContent = 'Saving...';
+      try {
+        await fetch('https://script.google.com/macros/s/AKfycbzGjxSVe1Q01lFRl3HDZttkJqY4OW9g2zeMy2_4tcUgpjTFg3qMso6pJF0NztTQ4gqG/exec', {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: `name=&email=${encodeURIComponent(email)}&source=Homepage`
+        });
+        btn.textContent = '✓ You\'re on the list!';
+        btn.style.background = '#1a6b2f';
+        input.disabled = true;
+      } catch(err) {
+        btn.textContent = 'Try again';
+      }
     }
   </script>
 </body>
